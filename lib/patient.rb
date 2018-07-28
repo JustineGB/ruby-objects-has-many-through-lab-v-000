@@ -18,12 +18,10 @@ class Patient
     #binding.pry
     Appointment.new(doctor, date, self ) #creating a new instance of Appointment (passing in the arguments, self as one) Should know about this instance know since I called self??.
   end
- #Patient class needs an instance meth `#appointments`,...
- #that iterates through the appointments array and...
- #returns appointments that belong to the patient.
-  def appointments
-    Appointment.all.select do |appointment|
-      appointment.patient == self
+  
+  def appointments  #Patient class needs an instance meth `#appointments`,...
+    Appointment.all.select do |appointment| #that iterates through the appointments array and...
+      appointment.patient == self  #returns appointments that belong to the patient.
     end
   end
 
