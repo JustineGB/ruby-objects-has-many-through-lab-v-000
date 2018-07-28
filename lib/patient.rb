@@ -19,9 +19,13 @@ class Patient
     Appointment.new(doctor, date, self ) #creating a new instance of Appointment (passing in the arguments, self as one) Should know about this instance know since I called self??.
   end
 
-  def doctors
+  def appointments
     Appointment.all.select do |appointment|
       appointment.doctor == self
+  end
+
+  def doctors
+    
     end
   end
 end
