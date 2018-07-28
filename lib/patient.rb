@@ -14,9 +14,9 @@ class Patient
     @@all
   end
 
-  def new_appointment(doctor, date)
+  def new_appointment(date, doctor)
     #this instance meth is taking in 2 arguments (doctor and date which are attaccess in the appt class and thus they are an instance of that class and can acess that classes methods and the doctor class methods?)
-    Appointment.new(doctor, date, self)
+    Appointment.new(date, doctor, self)
     #creating a new instance of Appointment (passing in the arguments, self as one) Should know about this instance know since I called self??.
   end
 
